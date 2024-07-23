@@ -1,0 +1,66 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lung Cancer Prediction Result</title>
+    <style>
+        /* style.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            
+        }
+        .con {
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .result-message {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .result-message.success {
+            color: green;
+        }
+
+        .result-message.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p class="result-message {% if result == name + ' you have Lung Cancer' %}error{% else %}success{% endif %}">{{ result }}</p>
+    </div>
+    <div class="con">
+        <h4>Follow the link below to learn more about lung cancer </h4>
+        <a href="https://www.who.int/news-room/fact-sheets/detail/lung-cancer" target="_blank">https://www.who.int/news-room/fact-sheets/detail/lung-cancer</a>
+    </div>
+</body>
+</html>
