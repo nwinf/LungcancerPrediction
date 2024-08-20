@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Form</title>
+    <!--<link rel="stylesheet" href="style.css"> *--> 
+    <style>
+        /* style.css */
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f3;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;          
+            
+        }
+    
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            text-align: center;
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 24px;
+        }
+    
+        table {
+            width: 100%;
+        }
+    
+        td {
+            padding: 10px;
+        }
+    
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"]{
+            margin-right: 5px;
+        }
+    
+        input[type="submit"] {
+      
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Predictive Lung Cancer Assesment Form</h1>
+    <form action="/result" method="POST">
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" id="name" required></td>
+            </tr>
+            
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" name="age" id="age" required></td>
+            </tr>
+            
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="1" required>Male
+                    <input type="radio" name="gender" id="gender" value="0" required>Female
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="yf">Yellow  Fingers</label></td>
+                <td>
+                    <input type="radio" name="yf" id="yf" value="2" required>Yes
+                    <input type="radio" name="yf" id="yf" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="anxiety">Anxiety</label></td>
+                <td>
+                    <input type="radio" name="anxiety" id="anxiety" value="2" required>Yes
+                    <input type="radio" name="anxiety" id="anxiety" value="1" required>No
+                </td>   
+            </tr>
+            <tr>
+                <td><label for="pp">Peer Pressure</label></td>
+                <td>
+                    <input type="radio" name="pp" id="pp" value="2" required>Yes
+                    <input type="radio" name="pp" id="pp" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="cd">Chronic Disease</label></td>
+                <td>
+                    <input type="radio" name="cd" id="cd" value="2" required>Yes
+                    <input type="radio" name="cd" id="cd" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="fatigue">Fatigue</label></td>
+                <td>
+                    <input type="radio" name="fatigue" id="fatigue" value="2" required>Yes
+                    <input type="radio" name="fatigue" id="fatigue" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="allergy">Allergy</label></td>
+                <td>
+                    <input type="radio" name="allergy" id="allergy" value="2" required>Yes
+                    <input type="radio" name="allergy" id="allergy" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="wheezing">Wheezing</label></td>
+                <td>
+                    <input type="radio" name="wheezing" id="wheezing" value="2" required>Yes
+                    <input type="radio" name="wheezing" id="wheezing" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="alcohol">Alcohol</label></td>
+                <td>
+                    <input type="radio" name="alcohol" id="alcohol" value="2" required>Yes
+                    <input type="radio" name="alcohol" id="alcohol" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="coughing">Coughing</label></td>
+                <td>
+                    <input type="radio" name="coughing" id="coughing" value="2" required>Yes
+                    <input type="radio" name="coughing" id="coughing" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="smoking">Smoking</label></td>
+                <td>
+                    <input type="radio" name="smoking" id="smoking" value="2" required>Yes
+                    <input type="radio" name="smoking" id="smoking" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="sb">Shortness Breath</label></td>
+                <td>
+                    <input type="radio" name="sb" id="sb" value="2" required>Yes
+                    <input type="radio" name="sb" id="sb" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="sd">Swallowing difficulty</label></td>
+                <td>
+                    <input type="radio" name="sd" id="sd" value="2" required>Yes
+                    <input type="radio" name="sd" id="sd" value="1" required>No
+                </td>
+            </tr>
+            <tr>
+                <td><label for="cp">Chest Pain</label></td>
+                <td>
+                    <input type="radio" name="cp" id="cp" value="2" required>Yes
+                    <input type="radio" name="cp" id="cp" value="1" required>No
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
