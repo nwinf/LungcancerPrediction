@@ -28,6 +28,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Clean Python cache
+      run: |
+        python -m pip cache purge
+      
     - name: Checkout code
       uses: actions/checkout@v4
 
