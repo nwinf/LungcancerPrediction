@@ -28,9 +28,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clean Python cache
-      run: |
-        python -m pip cache purge
       
     - name: Checkout code
       uses: actions/checkout@v4
@@ -39,10 +36,15 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.12.3
-
+        
+    - name: Clean Python cache
+      run: |
+        python -m pip cache purge
+        
     - name: Install Python Dependencies
       run: |
         python -m pip install --upgrade pip
+        python -m pip install --upgrade setuptools
         pip install -r requirement.txt
 
     - name: Build Flask Application
