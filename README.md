@@ -113,19 +113,6 @@ The project implements and evaluates the following models:
 - **Logistic Regression**: Linear classification baseline
 - **Gradient Boosting**: Advanced ensemble method
 
-Performance comparisons and detailed results can be found in the `results/` directory.
-
-## Results
-
-[Add summary of model performance, key metrics (accuracy, precision, recall, F1-score), and visualizations]
-
-Example:
-- Best Model: Random Forest
-- Accuracy: XX%
-- Precision: XX%
-- Recall: XX%
-- F1-Score: XX%
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request with improvements, bug fixes, or new features.
